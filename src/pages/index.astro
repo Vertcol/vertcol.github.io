@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import avatar from "../../public/assets/avatar.png";
+import "../base.css";
+---
+
+<Layout title="Digified">
+	<main>
+		<section class="flex items-center justify-evenly w-full my-10">
+			<div
+				class="flex flex-row m-10 items-center justify-evenly flex-wrap"
+			>
+				<Image
+					src={avatar}
+					alt="avatar"
+					class="w-40 h-40 inline-flex rounded-full"
+					loading="eager"
+				/>
+				<div class="m-6 inline-block">
+					<h1 class="font-semibold text-3xl text-center">
+						Hi! I'm Joran
+					</h1>
+					<p class="text-xl text-center text-gray-400">
+						I like making things
+					</p>
+				</div>
+			</div>
+		</section>
+		<ul
+			role="list"
+			class="flex flex-row justify-center flex-wrap items-stretch gap-14"
+		>
+			<Card
+				href="https://docs.astro.build/"
+				title="I WRITE SOFTWARE"
+				body="I've written a wide variety of software, often from scratch. This has made me feel comfortable adapting and combining diverse technologies, from data transformation in Python to keyboard emulation on a calculator in C and much more."
+				button_txt="PROJECTS"
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="I CREATE GRAPHICS"
+				body="I like to make make interesting 3D graphics. I've modelled VR environments, sculpted 3D characters, and also done animation. Because I'm familiar with a lot of the technical theory behind 3D, I've been able to push my art in novel ways."
+				button_txt="GALLERY"
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="I SOLVE PROBLEMS"
+				body="I want to use technology to solve problems. I am convinced cross-domain knowledge is one of the keys to finding better ways to solve problems and new opportunities, nothing exists in a vacuum."
+				button_txt="CONTACT"
+			/>
+		</ul>
+	</main>
+</Layout>

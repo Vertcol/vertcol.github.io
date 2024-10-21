@@ -1,0 +1,49 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>{title}</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Astro description" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1"
+		/>
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<header class="mb-2">
+			<nav
+				class="p-3 my-5 sm:my-0 flex items-center justify-evenly sm:justify-between flex-wrap place-items-center"
+			>
+				<a aria-label="Homepage" class="p-1 mx-1" href="/">
+					<img
+						width="180"
+						height="63"
+						class="dark:invert"
+						src="assets/logo.svg"
+						aria-label="digified"
+						alt="Logo Digified"
+					/>
+				</a>
+				<ul
+					class="flex font-bold items-center gap-3 sm:gap-5 m-2 dark:text-white"
+				>
+					<a href="/projects.html">PROJECTS</a>
+					<a href="/gallery.html">GALLERY</a>
+					<a href="/contact">CONTACT</a>
+				</ul>
+			</nav>
+		</header>
+		<slot />
+		<footer>Social media stuff</footer>
+	</body>
+</html>

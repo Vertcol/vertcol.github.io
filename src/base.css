@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply font-semibold md:text-xl bg-gray-200 dark:bg-black dark:text-white;
+    }
+
+    a {
+        @apply focus:outline-2 focus:outline focus:outline-blue-400 focus:rounded-sm;
+    }
+
+    p {
+        @apply text-base text-gray-300 my-1 font-normal;
+    }
+
+    h3 {
+        @apply text-xl m-2 text-gray-300;
+    }
+}
