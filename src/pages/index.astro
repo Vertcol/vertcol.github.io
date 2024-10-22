@@ -16,13 +16,15 @@ import "../base.css";
 					muted
 					disablepictureinpicture
 					class="absolute inset-0 w-full h-full object-cover"
+					aria-hidden="true"
 				>
-					<source src="assets/showcase.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
+					<source src="assets/showcase.mp4" type="video/mp4"/>
+					<p>Background video showcase</p>
 				</video>
 
 				<div
 					class="absolute inset-0 bg-gradient-to-b from-transparent to-black"
+					
 				>
 				</div>
 
@@ -37,7 +39,7 @@ import "../base.css";
 					/>
 
 					<div
-						class="m-6 p-2 inline-block"
+						class="m-6 p-2 inline-block "
 					>
 						<h1 class="font-semibold text-3xl text-center text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
 							Hi! I'm Joran
@@ -58,18 +60,21 @@ import "../base.css";
 				title="I WRITE SOFTWARE"
 				body="I've written a wide variety of software, often from scratch. This has made me feel comfortable adapting and combining diverse technologies, from data transformation in Python to keyboard emulation on a calculator in C and much more."
 				button_txt="PROJECTS"
+				icon="/icons/package.svg"
 			/>
 			<Card
 				href="/gallery"
 				title="I CREATE GRAPHICS"
 				body="I like to make make interesting 3D graphics. I've modelled VR environments, sculpted 3D characters, and also done animation. Because I'm familiar with a lot of the technical theory behind 3D, I've been able to push my art in novel ways."
 				button_txt="GALLERY"
+				icon="/icons/image.svg"
 			/>
 			<Card
 				href="/contact"
 				title="I SOLVE PROBLEMS"
 				body="I want to use technology to solve problems. I am convinced cross-domain knowledge is one of the keys to finding better ways to solve problems and new opportunities, nothing exists in a vacuum."
 				button_txt="CONTACT"
+				icon="/icons/community.svg"
 			/>
 		</ul>
 	</main>

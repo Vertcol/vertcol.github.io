@@ -4,13 +4,17 @@ interface Props {
     body: string;
     href: string;
     button_txt: string;
+    icon: string;
 }
 
-const { href, title, body, button_txt } = Astro.props;
+const { href, title, body, button_txt, icon } = Astro.props;
 ---
 
 <li class="max-w-72 p-6 flex flex-col justify-between">
-    <h1 class="text-xl text-center my-2 font-extrabold">{title}</h1>
+    <h2 class="text-xl text-center my-2 font-extrabold">{title}</h2>
     <p class="text-center dark:text-gray-400 text-gray-500 my-6">{body}</p>
-    <a class="font-semibold m-2 block bg-gray-600 text-white text-center p-2 rounded-xl" href={href}>{button_txt}</a>
+    <a class="flex justify-around font-bold m-2 bg-gray-600 text-white text-center p-1.5 rounded-xl transition-transform duration-300 hover:scale-110" href={href}>
+        <img src={icon} width="24" height="24" aria-hidden="true" alt="button icon" loading="lazy">
+        <span class="inline mx-4">{button_txt}</span>
+    </a>
 </li>

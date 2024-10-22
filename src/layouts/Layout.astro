@@ -44,6 +44,19 @@ const { title } = Astro.props;
 			</nav>
 		</header>
 		<slot />
-		<footer>TODO</footer>
+		<footer class="flex flex-col my-10 items-center">
+			<h2 class="inline-block my-4 text-xl font-bold">Socials</h2>
+			<div id="socials" class="flex justify-center gap-4">
+				<a href="https://x.com/Powerbyte7" title="Powerbyte7 on X">
+					<img src="/icons/x.svg" width="40" height="40" class="inline-block dark:invert" alt="logo X" loading="lazy">
+				</a>
+				<a href="https://www.youtube.com/@Powerbyte7" title="Powerbyte7 on YouTube">
+					<img src="/icons/youtube.svg" width="40" height="40" class="inline-block dark:invert" alt="logo YouTube" loading="lazy">
+				</a>
+				<a href="https://www.github.com/Powerbyte7" title="Powerbyte7 on Github">
+					<img src="/icons/github.svg" width="40" height="40" class="inline-block dark:invert" alt="logo Github" loading="lazy">
+				</a>
+			</div>
+		</footer>
 	</body>
 </html>
