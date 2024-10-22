@@ -8,43 +8,44 @@ import "../base.css";
 
 <Layout title="Digified">
 	<main>
-		<section class="flex items-center justify-evenly w-full">
-			<div class="relative w-full h-96">
+		<section class="flex w-full items-center justify-evenly">
+			<div class="relative h-96 w-full">
 				<video
 					autoplay
 					loop
 					muted
 					disablepictureinpicture
-					class="absolute inset-0 w-full h-full object-cover"
+					class="absolute inset-0 h-full w-full object-cover"
 					aria-hidden="true"
 				>
-					<source src="assets/showcase.mp4" type="video/mp4"/>
+					<source src="assets/showcase.mp4" type="video/mp4" />
 					<p>Background video showcase</p>
 				</video>
 
 				<div
 					class="absolute inset-0 bg-gradient-to-b from-transparent to-black"
-					
 				>
 				</div>
 
 				<div
-					class="absolute inset-0 flex flex-row m-10 items-center justify-center flex-wrap"
+					class="absolute inset-0 m-10 flex flex-row flex-wrap items-center justify-center"
 				>
 					<Image
 						src={avatar}
 						alt="avatar"
-						class="w-40 h-40 inline-flex rounded-full shadow-[0_4px_6px_rgba(0,0,0,0.5)] object-cover"
+						class="inline-flex h-40 w-40 rounded-full object-cover shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
 						loading="eager"
 					/>
 
-					<div
-						class="m-6 p-2 inline-block "
-					>
-						<h1 class="font-semibold text-3xl text-center text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
+					<div class="m-6 p-2 inline-block">
+						<h1
+							class="text-center text-3xl font-semibold text-white drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
+						>
 							Hi! I'm Joran
 						</h1>
-						<p class="text-xl text-center text-gray-400 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
+						<p
+							class="text-center text-xl text-gray-400 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
+						>
 							I like making things
 						</p>
 					</div>
@@ -53,7 +54,7 @@ import "../base.css";
 		</section>
 		<ul
 			role="list"
-			class="flex flex-row justify-center flex-wrap items-stretch gap-14"
+			class="flex flex-row flex-wrap items-stretch justify-center gap-8"
 		>
 			<Card
 				href="/projects"
