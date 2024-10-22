@@ -13,7 +13,7 @@ const { href, title, body, button_txt, icon } = Astro.props;
 <li class="flex max-w-72 flex-col justify-between p-6">
     <h2 class="my-2 text-center text-xl font-extrabold">{title}</h2>
     <p class="my-6 text-center text-gray-600 dark:text-gray-400">{body}</p>
-    <a class="m-2 flex justify-between rounded-xl bg-black dark:bg-gray-600 p-1.5 text-center font-bold text-white transition-transform duration-300 hover:scale-110" href={href}>
+    <a class="m-2 flex items-center justify-between rounded-xl bg-black p-1.5 text-center font-bold text-white transition-transform duration-300 hover:scale-110 dark:bg-gray-600" href={href}>
         <img  class="m-1" src={icon} width="24" height="24" aria-hidden="true" alt="button icon" loading="lazy">
         <span class="inline w-full">{button_txt}</span>
     </a>
