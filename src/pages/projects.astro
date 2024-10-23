@@ -1,0 +1,256 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import stitcher from "../../public/projects/stitcher.png";
+import uvfx from "../../public/projects/uvfx.png";
+import qr_share from "../../public/projects/qr_share.jpg";
+import "../base.css";
+---
+
+<Layout title="Digified - Projects">
+    <main class="px-4 py-8 max-w-screen-lg mx-auto">
+        <section id="software" class="mb-16">
+            <div class="text-center mb-6">
+                <h2
+                    class="text-2xl font-extrabold text-white bg-slate-900 inline-block px-6 py-2 rounded-md"
+                >
+                    SOFTWARE
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        Seurat Capture
+                    </h3>
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/icons/blender.svg"
+                            alt="Blender icon"
+                            class="w-6 h-6 mx-2"
+                        />
+                        <img
+                            src="/icons/python.svg"
+                            alt="Python icon"
+                            class="w-6 h-6 mx-2"
+                        />
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        A Blender addon that helps optimize 3D scenes for VR
+                        with <a
+                            href="https://github.com/googlevr/seurat"
+                            class="text-blue-400 underline">Google Seurat</a
+                        >. It significantly reduces draw calls by optimizing
+                        meshes.
+                    </p>
+                    <iframe
+                        title="Seurat Capture Demo"
+                        class="w-full h-60 rounded-lg"
+                        src="https://www.youtube.com/embed/LnVr26j0Bqk"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">UVFX</h3>
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/icons/blender.svg"
+                            alt="Blender icon"
+                            class="w-6 h-6 mx-2"
+                        />
+                        <img
+                            src="/icons/python.svg"
+                            alt="Python icon"
+                            class="w-6 h-6 mx-2"
+                        />
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        <a
+                            href="https://github.com/Powerbyte7/UV_FX"
+                            class="text-blue-400 underline">UVFX</a
+                        > converts 3D animations from Blender into reusable graphics
+                        templates for easy sharing.
+                    </p>
+                    <Image
+                        src={uvfx}
+                        alt="UVFX example"
+                        loading="eager"
+                        class="w-full h-60 rounded-lg object-cover"
+                    />
+                </div>
+
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        OpenCV Stitcher
+                    </h3>
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/icons/python.svg"
+                            alt="Python icon"
+                            class="w-6 h-6 mx-2"
+                            loading="lazy"
+                        />
+                        <img
+                            src="/icons/cpp.svg"
+                            alt="C++ icon"
+                            class="w-6 h-6 mx-2"
+                            loading="lazy"
+                        />
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        A photo stitching software using OpenCV to make 2D maps
+                        of farm fields by blending photos together and
+                        outputting tiles for Leaflet.
+                    </p>
+                    <Image
+                        src={stitcher}
+                        alt="Stitcher example"
+                        class="w-full h-60 rounded-lg object-cover"
+                    />
+                </div>
+
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        QRshare
+                    </h3>
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/icons/java.svg"
+                            alt="Java icon"
+                            class="w-6 h-6 mx-2"
+                            loading="lazy"
+                        />
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        An Android app that generates QR codes for text
+                        selections, making it easy to share links or text in
+                        person.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <Image
+                            src={qr_share}
+                            alt="QR share screenshot"
+                            class="w-60 h-38 object-cover rounded-lg"
+                        />
+                    </div>
+                </div>
+                
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        HIDeous
+                    </h3>
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/icons/c.svg"
+                            alt="C icon"
+                            class="w-6 h-6 mx-2"
+                            loading="lazy"
+                        />
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        I was curious about C programming and the USB
+                        protocol, so I turned my graphic calculator into a
+                        keyboard, because why not!
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <iframe
+                        title="Possum Springs VR Showcase"
+                        loading="lazy"
+                        class="w-full h-60 rounded-lg"
+                        src="https://www.youtube.com/embed/ouwz9IaQheQ"
+                        allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        Ti-84 Plus CE Raycaster
+                    </h3>
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/icons/c.svg"
+                            alt="C icon"
+                            class="w-6 h-6 mx-2"
+                            loading="lazy"
+                        />
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        I hadn't seen anyone make a raycaster for the Ti-84
+                        yet, so I gave it a try. I used a lookup table to
+                        substitute the slow math functions.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <iframe
+                        title="Possum Springs VR Showcase"
+                        loading="lazy"
+                        class="w-full h-60 rounded-lg"
+                        src="https://www.youtube.com/embed/wBcSiD25ZHQ"
+                        allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="3d" class="mb-16">
+            <div class="text-center mb-6">
+                <h2
+                    class="text-2xl font-extrabold text-white bg-slate-900 inline-block px-6 py-2 rounded-md"
+                >
+                    3D
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        Possum Springs VR
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        A full recreation of Possum Springs from Night in the
+                        Woods as a VRchat world, optimized for performance with
+                        various 3D techniques.
+                    </p>
+                    <iframe
+                        title="Possum Springs VR Showcase"
+                        loading="lazy"
+                        class="w-full h-60 rounded-lg"
+                        src="https://www.youtube.com/embed/VwDtQTV6sd4"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        HyAssets
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        A project recreating Hytale's 2D and 3D assets,
+                        including textures and rigged characters used in various
+                        projects.
+                    </p>
+                    <iframe
+                        title="HyAssets showcase"
+                        loading="lazy"
+                        class="w-full h-60 rounded-lg"
+                        src="https://www.youtube.com/embed/b_L0hgH8e8U"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="bg-gray-950 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-center mb-4">
+                        The Scroll of Truth
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        A short Hytale animation created using Blender.
+                    </p>
+                    <iframe
+                        title="Scroll of Truth - Hytale Animated Short"
+                        loading="lazy"
+                        class="w-full h-60 rounded-lg"
+                        src="https://www.youtube.com/embed/4ne0erNNyug"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
