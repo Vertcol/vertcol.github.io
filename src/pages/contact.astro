@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import avatar from "../../public/assets/avatar.png";
+import "../base.css";
+---
+
+<Layout title="Digified - Contact">
+    <main class="px-4 py-8 max-w-screen-sm mx-auto">
+        <div class="flex w-full justify-center">
+            <h1
+                class="inline-block rounded-md bg-gray-800 px-6 py-2 text-2xl font-extrabold text-white m-4"
+            >
+                CONTACT
+            </h1>
+        </div>
+
+        <div
+            class="rounded-xl bg-[#11141C] text-white p-6 flex flex-row flex-wrap items-center justify-around"
+        >
+            <Image
+                src={avatar}
+                alt="avatar"
+                class="inline-flex h-40 w-40 m-4 rounded-full object-cover shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
+                loading="eager"
+            />
+
+            <p class="text-center m-4 max-w-64">
+                Shoot me a message at
+                <a href="mailto:joranklaui@gmail.com" class="text-blue-300"
+                    >joranklaui@gmail.com</a
+                >
+                and I'll be in touch!
+            </p>
+        </div>
+    </main>
+</Layout>
